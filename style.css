@@ -1,36 +1,13 @@
-/*/////////////////////index///////////////////////////////////*/
 body {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.header{
-  color: rgba(127, 129, 119, 0.493);
-  overflow: hidden;
-  background-color: rgb(155, 218, 255);
-  text-align: center;
-  display:flex;
-}
-.header a {
-  
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 2px 2px;
- 
-  cursor: pointer;
-  background-color: #4CAF50;
-
+  background-color: #000;
 }
 .navbar {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   background-color: #333;
-  
 }
-
 .navbar a {
   float: left;
   font-size: 16px;
@@ -46,7 +23,7 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px; 
   border: none;
   outline: none;
   color: white;
@@ -85,24 +62,39 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.header{
-  color: rgb(0, 0, 0);
+.header img{
+  max-width: 100%;
+  height: auto;
+  color: rgba(127, 129, 119, 0.493);
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
-
 }
-/*/////////////////////login///////////////////////////////////*/
-.input{
-  background:rgb(166, 227, 255);
-	
-    border-radius: 10px;
-    
-    border-style: ridge ;
-    width: 500px;
-    padding: 50px ;
-    border: 5px solid gray;
-    margin: 200px ;
-    text-align: center;
-
-
+.header .text{
+  position:absolute; 
+  top:5%; 
+  left:85%; 
+}
+.text img:hover{
+  background: #fff;
+  color: #000;
+}
+.jumbotron{
+  max-width: 100%;
+  height: auto;
+  font-family:'Montserrat', sans-serif;
+  padding: 1% 100% 100% 5%;
+  text-align: right;
+  color: #fff;
+  position: relative;
+}
+.button{
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button:hover{
+  background: #fff;
+  color: #000;
 }
