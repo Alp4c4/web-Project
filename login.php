@@ -23,7 +23,7 @@ if(!empty($row)){
     
 </head>
 <body>
-<div class="validlogin">
+<div class=validlogin>
 <p>เข้าสู่ระบบสำเร็จ</p>
 </div>
 ";
@@ -41,8 +41,8 @@ if(!empty($row)){
         
     </head>
     <body>
-    <div class="invalidlogin">
-    <p>เข้าสู่ระบบสำเร็จ</p>
+    <div>
+    <p>เข้าสู่ระบบไม่สำเร็จ</p>
     </div>
     ";
     echo "<a href='login.html'>เข้าสู่ระบบอีกครั้ง</a>";
