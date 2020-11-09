@@ -13,12 +13,38 @@ if(!empty($row)){
     $_SESSION["std_id"] = $row["std_id"];
     $_SESSION["std_name"] = $row["std_name"];
 
-    echo "เข้าสู่ระบบสําเร็จ<br>";
+    echo "
+    <!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Registration</title>
+    
+</head>
+<body>
+<div class="validlogin">
+<p>เข้าสู่ระบบสำเร็จ</p>
+</div>
+";
     echo "<a href='index.html'>test</a>";
+    
 
     // header("location:index.html");
 }else{
-    echo "ไม่สำเร็จ";
+    echo     "<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Registration</title>
+        
+    </head>
+    <body>
+    <div class="invalidlogin">
+    <p>เข้าสู่ระบบสำเร็จ</p>
+    </div>
+    ";
     echo "<a href='login.html'>เข้าสู่ระบบอีกครั้ง</a>";
 }
 

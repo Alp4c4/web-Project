@@ -92,17 +92,29 @@ body {
 
 }
 /*/////////////////////login///////////////////////////////////*/
-.input{
-  background:rgb(166, 227, 255);
-	
-    border-radius: 10px;
-    
-    border-style: ridge ;
-    width: 500px;
-    padding: 50px ;
-    border: 5px solid gray;
-    margin: 200px ;
-    text-align: center;
+fieldset {
+  background-color: #eeeeee;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 800px;
+  margin-top: 250px;
+
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+.inputuser{
+  margin: 5px;
+}
+.inputpassword{
+  margin: 5px;padding-left: 31px;
+}
+.Login{
+  margin-left: 120px;
 
 
 }

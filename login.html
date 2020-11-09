@@ -9,8 +9,10 @@
 <body>
 
 
-    <fieldset class="input">
-        <form method="POST" action="login.php"> 
+    
+        <form method="POST" action="login.php">
+            <fieldset>
+                <legend>Login</legend>
             <div class="inputuser">
                 รหัสนักศึกษา :
                 <input type="text" name="username" required>
@@ -19,9 +21,10 @@
                 รหัสผ่าน :
                 <input type="password" name="password" required>
             </div>
-            <button >Login</button>
+            <button class="Login" >Login</button>
+        </fieldset>
         </form>
-    </fieldset>
+    
     
 </body>
 </html>
