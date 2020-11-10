@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหานักศึกษา</title>
+
+    <script>
+        var httpRequest;
+        function send(){
+            httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = showResult;
+
+            var std_id = document.getElementById("std_id").value;
+            var url = "std_id.php?std_id="+std_id;
+
+            httpRequest.open("GET",url);
+            httpRequest.send();
+
+        }
+
+        function showResult(){
+            if(httpRequest.readyState == 4 && httpRequest.status == 200){
+                document.getElementById("result").innerHTML = httpRequest.responseText;
+            }
+        }
+        // function show(){
+        //     var result = document.getElementById("result");
+        //     var name = "<?=$name?>"
+        //     var id = "<?=$id?>"
+        //     var prov = "<?=$prov?>"
+        //     var content = name +" "+ id +" "+prov
+
+        //     // ตัวแปร name,id,prov เอาไปแยกใช้ได้เลยในภาษา js (แก้เสร็จลบข้อความนี้)
+        //     result.innerHTML = content
+
+        // }
+        
+        
+    </script>
+</head>
+<body>
+    <div>
+        <!-- <form action="#" method="GET"> -->
+            <label for="prov">กรอกรหัสนักศึกษา</label>
+            <input type="text" name="std_id" id="std_id" onkeyup="send()"><br>
+            <!-- <button onclick="show()">ค้นหา</button> -->
+        <!-- </form> -->
+    </div>
+    <div id="result">
+
+    </div>
+</body>
+</html>
