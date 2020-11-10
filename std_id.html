@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>ค้นหานักศึกษา</title>
 
     <script>
@@ -24,31 +25,22 @@
                 document.getElementById("result").innerHTML = httpRequest.responseText;
             }
         }
-        // function show(){
-        //     var result = document.getElementById("result");
-        //     var name = "<?=$name?>"
-        //     var id = "<?=$id?>"
-        //     var prov = "<?=$prov?>"
-        //     var content = name +" "+ id +" "+prov
-
-        //     // ตัวแปร name,id,prov เอาไปแยกใช้ได้เลยในภาษา js (แก้เสร็จลบข้อความนี้)
-        //     result.innerHTML = content
-
-        // }
+      
         
         
     </script>
 </head>
 <body>
-    <div>
-        <!-- <form action="#" method="GET"> -->
+    <fieldset>
+    <div class="std_user">
+        
             <label for="prov">กรอกรหัสนักศึกษา</label>
             <input type="text" name="std_id" id="std_id" onkeyup="send()"><br>
-            <!-- <button onclick="show()">ค้นหา</button> -->
-        <!-- </form> -->
+           
     </div>
     <div id="result">
 
     </div>
+    </fieldset>
 </body>
 </html>

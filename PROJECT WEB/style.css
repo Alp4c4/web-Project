@@ -223,3 +223,20 @@ body {
   background: #fff;
   color: #000;
 }
+/*//////////////////////////////std_id.php////////////////////////////////////////*/
+.std_user{
+  color: rgba(127, 129, 119, 0.493);
+  overflow: hidden;
+  background-color: rgb(155, 218, 255);
+  text-align: center;
+  display:flex;
+  
+}
+fieldset {
+  background-color: #eeeeee;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 800px;
+  margin-top: 250px;
+
+}
