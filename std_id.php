@@ -10,7 +10,7 @@ $stmt->bindParam(1,$_GET["std_id"]);
 $stmt->execute();
 $row = $stmt->fetch();
 if(empty($row)){
-     echo "<script>alert('ไม่พบรหัสนี้'); </script>";
+   
 }else{
     echo"<table><tr><th>ชื่อ-นามสกุล</th><th>เลขที่ประจำตัว</th><th>จังหวัดภูมิลำเนา</th></tr>";
     $name = $row["std_name"];
