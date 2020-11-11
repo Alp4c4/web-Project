@@ -53,9 +53,10 @@ if(empty($_SESSION["std_id"])){
 </head>
 <body>
 <fieldset>
+<legend>Changepassword</legend>
     <div>
         <form method="POST" action="changed.php" class="cp">
-        <legend>Changepassword</legend>
+        
             <label class="prov">รหัสผ่านใหม่</label>
             <input type="text" name="password" id="password" onkeyup="check()"pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"require>
             <label id="showc"></label><br>
