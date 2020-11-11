@@ -1,31 +1,7 @@
 <?php
 include "connect.php";
 ?>
-<?php 
-                $url = "https://opend.data.go.th/govspending/bbgfmisprovince?api-key=aycWKKDOnjNyNILewThrGhS7D2lOc8ye";
-                $data = file_get_contents($url);
-                $province = json_decode($data, true);
 
-                $x = 0;
-                echo "<br>";
-                foreach($province["result"] as $value){
-                    // $provarr[$x] = $value["prov_name"];
-                    if($value["prov_name"]=="กรุงเทพมหานคร"){
-                        $value["prov_name"]="กรุงเทพฯ";
-                    }
-                    $stmt = $pdo->prepare('SELECT * FROM `student` WHERE province = ?');
-                    $stmt->bindParam(1,$value["prov_name"]);
-                    $stmt->execute();
-                    $count=0;
-                    while($row = $stmt->fetch()){
-                        $count++;
-                    }
-                    echo $value["prov_name"]." ".$count."คน<br>";
-
-                    $x++;
-                }
-
-            ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,8 +14,11 @@ include "connect.php";
             httpRequest.onreadystatechange = showResult;
 
             var prov = document.getElementById("prov").value;
+            if(prov=="กรุงเทพมหานคร"){
+                prov = "กรุงเทพฯ"
+            }
             var url = "prov.php?prov="+prov;
-            // console.log(prov.value)
+            console.log(prov)
 
             httpRequest.open("GET",url);
             httpRequest.send();
@@ -54,16 +33,29 @@ include "connect.php";
     </script>
 </head>
 <body>
-    <!-- <div>
+    <div>
         <form action="#" method="GET">
             <label for="prov">เลือกจังหวัด</label>
             <select id="prov" name="prov" onchange="send()">
+            <?php
+            $url = "https://opend.data.go.th/govspending/bbgfmisprovince?api-key=aycWKKDOnjNyNILewThrGhS7D2lOc8ye";
+            $data = file_get_contents($url);
+            $province = json_decode($data, true);
+
+            $x = 0;
+            // echo "<br>";
+            foreach($province["result"] as $value){
+                echo "<option>".$value["prov_name"]."</option>";
+
+            }
+
+            ?>
             </select>
         </form>
     </div>
     <div id="result">
 
-    </div> -->
+    </div>
     
 </body>
 </html>
