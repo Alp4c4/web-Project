@@ -1,0 +1,21 @@
+fieldset {
+  background-color: #eeeeee;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 800px;
+  margin-top: 250px;
+}
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+.inputuser{
+  margin: 5px;
+}
+.inputpassword{
+  margin: 5px;padding-left: 31px;
+}
+.Login{
+  margin-left: 120px;
+}
