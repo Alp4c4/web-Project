@@ -1,8 +1,18 @@
 <style>
 table, th, td {
     border: 1px solid black;
+    text-align: center;
+    border: 2px #2b2b2b solid;
+    color: #2b2b2b;
+    
+
 }
+
+table { background-color: #bde9ba; }
+th { background-color: #ffd78c; }
+
 </style>
+
 <?php
 include "connect.php";
 $stmt = $pdo->prepare('SELECT * FROM `student` WHERE std_id = ?');

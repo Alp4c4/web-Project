@@ -1,6 +1,31 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    border: 2px #2b2b2b solid;
+    color: #2b2b2b;
+    
+
+}
+
+table { background-color: #bde9ba; }
+th { background-color: #ffd78c; }
+
+.info{
+ 
+  margin-left:40%;
+  
+
+
+}
+</style>
+
 <?php
+
+
 include "connect.php";
 session_start();
+
 
 if(empty($_SESSION["std_id"])){
     header("location:login.html");
@@ -48,7 +73,7 @@ if(empty($_SESSION["std_id"])){
   <a href="changepass.php">แก้ไขรหัสผ่าน</a> 
 </div>
 <h1 class="textsub">ยินดีต้อนรับคุณ<?php echo $_SESSION["std_name"];?></h1><br>
-<div class="menuofcheckinfo">
+
   <div class="info">
     <?php
     $stmt = $pdo->prepare("SELECT register.course_id,course.title FROM register JOIN course ON register.course_id = course.course_id WHERE std_id = ? ");
@@ -63,14 +88,16 @@ if(empty($_SESSION["std_id"])){
     echo "<th>วิชา</th>";
     echo "<th>รหัสวิชา</th>";
     while ($row = $stmt->fetch()) {
-        echo "<tr>";
-        echo "<th>" . $row["title"] . "</th>";
-        echo "<th>" . $row["course_id"] . "</th>";
-        echo "</tr>";
+      $title = $row["title"];
+      $course_id = $row["course_id"];
+      
+        echo "<tr><td>".$title."</td><td>" .$course_id."</td></tr>";
+       
+        
     }
     echo "</table>";
     ?>
     </div>
-</div>
+  
 </body>
 </html>
