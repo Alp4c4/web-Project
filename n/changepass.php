@@ -9,6 +9,7 @@ if(empty($_SESSION["std_id"])){
 ?>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เปลี่ยนรหัสผ่าน</title>
@@ -51,17 +52,19 @@ if(empty($_SESSION["std_id"])){
     </script>
 </head>
 <body>
+<fieldset>
     <div>
-        <form method="POST" action="changed.php">
-            <label for="prov">รหัสผ่านใหม่</label>
-            <input type="text" name="password" id="password" onkeyup="check()">
+        <form method="POST" action="changed.php" class="cp">
+            <label class="prov">รหัสผ่านใหม่</label>
+            <input type="text" name="password" id="password" onkeyup="check()"pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"require>
             <label id="showc"></label><br>
-            <label for="prov">ยืนยันรหัสผ่าน</label>
-            <input type="password" id="cfpass" onkeyup="confirm()">
+            <label class="prov">ยืนยันรหัสผ่าน</label>
+            <input type="password" id="cfpass" onkeyup="confirm()"pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"require>
             <label id="showcf"></label><br>
-            <button>เปลี่ยนรหัสผ่าน</button>
+            <button class="changepass">เปลี่ยนรหัสผ่าน</button>
         </form>
         
     </div>
+    </fieldset>
 </body>
 </html>
