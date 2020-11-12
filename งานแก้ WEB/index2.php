@@ -1,0 +1,57 @@
+<?php
+include "connect.php";
+session_start();
+?>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<div class="header">
+    <img src="pic1.jpg" width="auto">
+    <div class="text">
+
+      <section class="jumbotron">
+        <a href="logout.php" class="button">LOGOUT</a>
+      </section>
+    </div>
+</div>  
+<div class="navbar">
+    <a href="checkindex.php">หน้าแรก</a>
+    <div class="dropdown">
+    <button class="dropbtn">ลงทะเบียน
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="addregistration.php">การเพิ่มวิชา</a>
+      <a href="deleteregis.php">การถอนวิชา</a>
+    </div>
+  </div> 
+  <a href="info.php">ตรวจสอบการลงทะเบียน</a>
+  <div class="dropdown">
+    <button class="dropbtn">ค้นหาข้อมูลนักศึกษา
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="checkcity.php">ค้นหาข้อมูลจังหวัดของนักศึกษา</a>
+      <a href="checkstd_id.php">ค้นหาข้อมูลนักศึกษาด้วยเลขรหัสประจำตัว</a> 
+    </div>
+  </div>
+  <a href="changepass.php">แก้ไขรหัสผ่าน</a>
+</div>
+<center><h1 class="h1index">รายวิชาที่เปิดสอนในมหาลัย</h1></center>
+<div class="sublist">
+<ul>
+  <li>รหัสวิชา : 322236  ||  วิชา : WEB APPLICATION PROGRAMMING</li>
+  <li>รหัสวิชา : 322431  ||  วิชา : WEB TECHNOLOGY</li>
+  <li>รหัสวิชา : 322372  ||  วิชา : SYSTEMS ANALYSIS AND DESIGN</li>
+  <li>รหัสวิชา : 322224  ||  วิชา : DIGITAL LOGIC AND COMPUTER INTERFACING</li>
+  <li>รหัสวิชา : 322114  ||  วิชา : STRUCTURED PROGRAMMING</li>
+  <li>รหัสวิชา : 322473  ||  วิชา : SOFTWARE DEVELOPMENT AND PROJECT MANAGEMENT</li>
+</ul>
+</div>
+</body>
+</html>
