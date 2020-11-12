@@ -13,9 +13,18 @@ if(!empty($row)){
     session_regenerate_id();
     $_SESSION["std_id"] = $_POST["username"];
     $_SESSION["std_name"] = $row["std_name"];
+    if(empty($_COOKIE["visit"])){
+        setcookie("visit",0,time()+3600*24);
+    }
+    if(!isset($_COOKIE["visit"])){
+
+    }else{
+        $visit = $_COOKIE["visit"] + 1;
+        setcookie("visit",$visit,time() + 3600 * 24);
+    }
 
     echo "<script>
-            var ans = confirm('เข้าสู่ระบบสําเร็จ')
+            var ans = confirm('เข้าสู่ระบบสําเร็จ มีผู้เข้าชมทั้งหมด ".$_COOKIE["visit"]." คน')
             if(ans==true)document.location = 'index2.php'
         </script>";
 
